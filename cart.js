@@ -34,10 +34,10 @@ const cart = [
 ]
 
 //CODE HERE
-const cartTotal = 0
+const cartsTotal = 0
 const summedPrice = cart.reduce((acc, cur) =>  {
     return acc + cur.price
-}, cartTotal)
+}, cartsTotal)
 console.log(summedPrice)
 
 
@@ -58,7 +58,13 @@ console.log(summedPrice)
 
 //CODE HERE
 
-//const calcFinalPrice = 
+const calcFinalPrice = (cartsTotal, couponValue, tax) => {
+    const totalBeforeCoupon = cartsTotal * (1 + tax)
+    const finalprice = totalBeforeCoupon - couponValue
+    return finalprice
+}
+
+console.log(calcFinalPrice(summedPrice, 1, .06 ))
 
 
 
@@ -88,7 +94,10 @@ console.log(summedPrice)
 
 /*
     TEXT ANSWER HERE
-
+first and last name to id the customer
+email to send info
+address to know where the customer is 
+and a number to get in contact
 */
 
 /*
@@ -97,3 +106,12 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+const customerz = {
+    firstName: "Jeremiah",
+    lastName: "Benjamin",
+    email:"jeremiahbenajmin@whoCares.com",
+    address:"143 Keep It P Dr",
+    number: "5555555555"
+
+
+}

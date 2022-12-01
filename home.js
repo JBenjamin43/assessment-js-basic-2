@@ -62,7 +62,7 @@ function canWeDeliver(zip){
     }
     console.log("you to far fam.")
 }
-
+///////////////////////////////////
 function canWeDeliver2(zip){
     var doesExist = false
     for(i = 0; i < deliveryAreaZipCodes.length; i++){
@@ -141,10 +141,16 @@ const deals = [
 
 //CODE HERE
 
-const {title:  dealOne} = deals
-deals.dealOne = ["10% off!"]
+// const {title:  dealOne} = deals
+// deals.dealOne = ["10% off!"]
 
-console.log(deals)
+// console.log(deals)
+
+console.log(deals[0].title)
+
+deals[0].title = deals[0].title.replace('15', '10')
+
+console.log(deals[0]. title)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -160,7 +166,11 @@ console.log(deals)
 
 //CODE HERE
 
+console.log(deals[1])
 
-deals.desc = ["This deal lasts until the end of april"]
-deals.desc.join(' ')
-console.log(deals)
+deals[1].desc = deals[1].desc.trim().replace('march', 'april')
+
+console.log(deals[1])
+// deals.desc = ["This deal lasts until the end of april"]
+// deals.desc.join(' ')
+// console.log(deals)
